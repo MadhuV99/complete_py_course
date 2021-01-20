@@ -1,0 +1,8 @@
+19-01-2021:21:41:00 DEBUG    [logging_2.py:10] This is a debug log
+19-01-2021:21:41:00 INFO     [logging_2.py:11] This is an info log
+19-01-2021:21:41:00 CRITICAL [logging_2.py:12] This is critical
+19-01-2021:21:41:00 ERROR    [logging_2.py:13] An error occurred
+19-01-2021:21:41:25 DEBUG    [logging_2.py:10] This is a debug log
+19-01-2021:21:41:25 INFO     [logging_2.py:11] This is an info log
+19-01-2021:21:41:25 CRITICAL [logging_2.py:12] This is critical
+19-01-2021:21:41:25 ERROR    [logging_2.py:13] An error occurred
