@@ -10,8 +10,8 @@ async def fetch_page(session, url):
         async with session.get(url) as response:
             print(f'Page took {time.time() - page_start} seconds')
             # print(response.status)
-            # print(response.text)
-            return response.status
+            # print(response.text())
+            return await response.text()
 
 
 async def get_multiple_pages(loop, *urls):
@@ -23,7 +23,8 @@ async def get_multiple_pages(loop, *urls):
         return await grouped_tasks
 
 loop = asyncio.get_event_loop()
-urls = ['http://google.com' for i in range(50)]
+urls = ['https://google.com' for i in range(50)]
 start = time.time()
-loop.run_until_complete(get_multiple_pages(loop, *urls))
+pages = loop.run_until_complete(get_multiple_pages(loop, *urls))
+print(pages[0])
 print(f'All pages took {time.time() - start} seconds')
